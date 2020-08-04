@@ -1,0 +1,184 @@
+html {
+  box-sizing: border-box
+  }
+   
+   /* The Universal Selector */
+  *, /* All elements*/
+  *::before, /* All ::before pseudo-elements */
+  *::after { /* All ::after pseudo-elements */
+    /* height & width will now include border & padding by default
+       but can be over-ridden as needed */
+  box-sizing: inherit;
+  }
+   
+   /* resets font size to be 62.5% of the user preference - 
+     in most browser configurations this will be 10px */
+   :root {
+    font-size: 62.5%
+   }
+
+  body {
+    display: flex;
+    background-color: white;
+   /* Use a system font, if none are available use an available sans-sarif   font */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin: 0;
+    color: grey;
+    display: grid;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+    height: 100vh;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  header {
+    grid-area: header;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: white;
+    text-align: center;
+  }
+          
+  footer {
+    background-color: rgb(100, 190, 100);
+    color: white;
+    grid-column: 3 / 5;
+    grid-row: 7 / 8;
+  }
+            
+  #call {
+    background-color: rgb(128, 226, 128);      
+    color: white;
+    grid-column: 1 / 3;
+    grid-row: 7 / 8;
+    align-items: center;
+    justify-content: center; 
+  }
+          
+  img {
+    background-color: white;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px; 
+    border: 10px;
+    }
+    
+  #div1{
+    background-color: rgb(218, 210, 210);
+    grid-column: 5 / 8;
+    grid-row: 1 / 2;
+    text-align: left;
+  }
+    
+  #div2 {
+    background-color: rgb(218, 210, 210);
+    grid-column: 5 / 8;
+    grid-row: 2 / 7;
+    padding-top: 130px;
+    text-align: left;
+  }
+    
+  #div3{
+    background-color: rgb(218, 210, 210);
+    grid-column: 5 / 8;
+    grid-row: 7 / 8;
+    padding-top: 110px;
+    text-align: left;
+  }
+    
+  p {
+    color: grey;
+    font-weight: lighter;
+    grid-row: 10 / 11;
+  }
+    
+        
+      
+
+@media only screen and (max-width: 768px) {
+  
+  body {
+    color: black;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+  }
+
+  header {
+    grid-area: header;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    background-color: white;
+    text-align: center;
+    color: grey;
+    }
+      
+  footer {
+    background-color: rgb(100, 190, 100);
+    color: white;
+    grid-column: 3 / 5;
+    grid-row: 11 / 13;
+  }
+        
+  #call {
+    background-color: rgb(128, 226, 128);      
+    color: white;
+    grid-column: 1 / 3;
+    grid-row: 11 / 13;
+    align-items: center;
+    justify-content: center; 
+  }
+      
+  img {
+    background-color: white;
+    grid-column: 1 / 5;
+    grid-row: 2 / 5;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    border: 20px;
+  }
+
+  #photo > img {
+    align-items: center;
+    Justify-content: space-between;
+  }
+
+  #div1{
+    background-color: white;
+    grid-column: 1 / 5;
+    grid-row: 5 / 6;
+    text-align: center;
+  }
+
+  #div2 {
+    background-color: rgb(218, 210, 210);
+    grid-column: 1 / 5;
+    grid-row: 6 / 8;
+    padding-top: 130px;
+    text-align: center;
+  }
+
+  #div3{
+    background-color: white;
+    grid-column: 1 / 5;
+    grid-row: 8 / 11;
+    padding-top: 110px;
+    text-align: center;
+  }
+
+  p {
+    color: grey;
+    font-weight: lighter;
+    grid-row: 10 / 11;
+  }
+}
